@@ -95,7 +95,7 @@ export async function isImageFileUsed(imageFile: string): Promise<boolean> {
  * @returns {string[]} A filtered array containing only image file paths.
  */
 export function filterImageFiles(files: string[]): string[] {
-    const imageExtensions = ['.jpg', '.jpeg', '.png', '.svg', '.gif', '.bmp', '.webp'];
+    const imageExtensions = ['.jpg', '.jpeg', '.png', '.svg', '.gif', '.bmp', '.webp', '.avif'];
     return files.filter(file => {
         const fileExtension = file.toLowerCase().split('.').pop();
         return fileExtension && imageExtensions.includes(`.${fileExtension}`);
